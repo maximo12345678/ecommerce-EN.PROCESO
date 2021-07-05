@@ -1,0 +1,52 @@
+
+
+
+
+
+CRITERIOS PARA VALIDAR UN OBJETIVO . un buen objetivo del proyecto, tiene que cumplir con TODO esto. A LA HORA DE ENTABLAR UN PROYECTO, DEJAR EN CLARO TOODO ESTO
+2 formas. 
+1- responder a 4 preguntas
+(RP, permite administrar todo lo de una empresa)
+Las 4 preguntas son super importantes, aclarar todo sin ambiguedades, bien objetivo.
+que?  quiero desarrollar un sistema ,que permita vender productos deportivos
+cuando?6 meses
+cuanto?1 sistema
+donde?en argentina
+como? ->> esto no, eso se ve cuando lo queres elaborar. ni el lenguaje, ni el ciclo de vida, ni el grupo de trabajo, nada. despues hay tiempo para esto
+
+2- 
+Specific (especifico), concretamente lo que se quiere hacer, no se deja abierto. "Quiero hacer un sistema para incrementar las ventas", esta mal porque falta el CUANTO
+Measurable (medible)
+Attainable (alcanzable)
+Relevant (relevante) , tiene que tener sentido, armar algo que tenga sentido de negocio.
+Time-bounded (con limite de tiempo) , tenes que definir el tiempo, es super importante. Si te dicen incrementar las ventas un 10%, se supone que es en un cierto tiempo
+
+
+
+
+
+
+
+Contenido del proyect charter, es un documento que contiene todo esto: 
+. Proposito
+. objetivo
+. descripcion de todo el proyecto a alto nivel
+. requisitos de alto nivel
+. riterios de aprobacion
+. limitaciones
+. supuestos, hipotesis que vas armando, suposiciones. ejemplo ecomerce, supones que no te vas a tener que hacer cargo del hosting.. sirven para validar, el cliente puede decir su opinion y terminas de limitar el proyecto
+. riesgos
+. cronograma de hitos, momentos mas importants del proyecto, se proyecta todo el proyecto, podes decir que si dura 1 año, vas a poderr decir que a los 2 meses tenes lista una parte, etc. en unos casos es dificil saber que va a pasar de aca a 1 año
+. presupuesto, cuanta plata se va a poner en el proyecto
+. PM, se designa el proyect manager, que autoridad va a tener y sus responsabilidades.
+. interesados, personas que veiamos en el lean insection, pods poner cualquier persona que se pudo haber beneficiado o perjudicado con el proyecto, mas alla de si lo uso o no. EJ: si haces un puente, los que van a usarlo van a estar felics y los vecinos no tanto
+  el PM tiene que tener en cuenta todo esto
+
+
+
+
+
+QUE ES, Y QUE NO ES. QUE HACE Y QUE NO HACE.
+IDEA 
+-> PRODUCT VISION (idea producto, bueno aca te dice para a donde vas, el horizonte, la vision.  (TEMPLATE, para, quienes, el, es un, que, a diferencia de, nuestro producto)
+-> PRODUCTO

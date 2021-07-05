@@ -1,0 +1,394 @@
+COMIENZO DE PLANIFICACION Y DESARROLLO:  5/5/2021
+
+-ver temas de rutas dinamicas, creadas en base al vendedor registrado. route path="/" + {variable}
+
+
+son 3 interfaces. 
+1 -> paginaPrincipal    .....    2 -> miNegocio
+3 -> paginaComprador
+
+
+cuando en el panel de administracion pones para ver tu tienda, te manda a otra pestaña abriendola como cliente digamos, sin estar logueado ni como vendedor
+
+
+
+-scroll y responsive
+
+-dato de vendedor, si tiene envio o no. al final de la pasarela de pago, si el vendedor tenia envio, se muestra la interfaz para el envio. ya no depende de nosotros eso. pero por ejemplo nacho hace repartos
+
+
+-las categorias, se las pongo yo, las subcategorias no. porque las categorias seria: perfumeria, fiambreria, lacteos, carnes, etc. y cada una va a ir con un icono, tipo la pagina de DISCO DIGITAL
+-las marcas
+
+-cuando se confirma un carrito, se modifican todos los stocks del producto
+
+Basicamente la idea es una plataforma para ventas digitales. 
+Como vendedor: Vos al entrar a la pagina, vas a poder loguerte o crear tu negocio, te inscribis y ya tenes tu pagina con tu link lista para que la modifiques
+a tu gusto. Mas alla de que vas a poder personalizarla a tu gusto y 100% flexible, tambien vas a crear tus catalogos de productos, con categorias, subcategorias, cada uno con su foto, descripcion, precio, y los datos que quieras darle.
+Vas a tener la posibilidad de que cuando un cliente entre a tu pagina y haga un pedido, te llegue la notificacion con el pago ya hecho asi le armas el pedido. Vos vas a configurar cuanto tiempo vas a tardar en armarle su pedido
+y en cuanto va a poder ir a buscarlo. Depende del negocio que tengas, si por ejemplo tenes un supermercado, configuras que si son mas de 50 produtos le muestre un mensaje al comprador de que en media hora lo pase a buscar, etc.
+
+
+
+Como comprador: Vas a llegar a la pagina por haber entrado mediante el link, por ejemplo "www.meon/fabian.com". Vas a ver una interfaz super linda, con iconos super intuitivos para todo y diseño moderno.
+Filtros de busqueda, o busqueda avanzada.
+Vas a poder buscar por tu propia cuenta en el catalogo de productos, tocar en el icono del carrito o en la foto, te lo añade al carrito. Tenes un boton para ver mas, te lleva a otra ruta donde ves
+exclusivamente el producto ese y ahi podes elegir si lo añadis al carrito o si volves atras, tambien podras ver mejor las fotos del producto con zoom.
+Carrito de compra, se te abrira una ventana modal del lado derecho de la pantalla al tocar el icono del navegador con forma de carrito (con numero esquinado indicando cantidad de items). En esa ventana 
+modal podras ver cada producto, su foto, su precio y unas flechitas para aumentar o bajar la cantidad del producto. Asi con todos los productos que hayas agregado, y vas a tener un total a pagar y boton para PAGAR.
+Vas a precisar loguearte en la pagina para armar tu carrito y obviamente luego para pagar tendras que ingresar los datos de tu cuenta de mercadopago para pagar(obviamente, es una pagina 100% segura)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+NOMBRE APELLIDO
+EMAIL
+NOMBRE MARCA
+CONTRA CONTRA
+
+
+TENER PRIORIDADES, COMO RELEASE DE SCRUM: no voy a prioprizar un pago en efectivo si el 98% se hace virtual co mercadopago. el login, primero con contraseña y email, mas adelante con redes sociales
+
+modelo de datos
+
+lista de todas las categorias y subcategorias
+
+
+
+carpeta llamada con el nombre del vendedor, para guardar las imagenes
+
+
+hacer el carrito todo completo y para empezar que el CHECKOUT sea por whatsap
+
+
+
+-validar si el campo no obligatorio de descripcion esta vacio, si no esta vacio, en el producto genero ese icono para ver la descipcion, sino no
+
+
+-tenes una funcion en useEffect, que llena el array global consultando a la base de datos los productos que tiene el vendedor. si vos agregas un producto a la base de datos, automaticamente se agrega al array
+
+
+
+marca
+nombre
+stock
+foto
+precio
+cat
+subcat
+subsubcat
+peso
+(avanzado (descripcion y video)) -> no obligatorio en la tabla
+
+
+
+-el vendedor puede permitir que se hagan compras de menos de 2000$ pesos por ejemplo o NO
+
+MENOS ES MAS. la idea es brindarle todo hecho al negocio, que se arme la pagina en minutos y suba sus productos rapidisimo
+
+-son 3 tarjetas de producto, una ventana modal con inputs donde el vendedor crea un producto, la tarjeta que ve el usuario en los catalogos, y la tarjeta que se ve en el carrito
+
+-en panel de control, el nombre del vendedor no es un boton, es solo texto. el boton de inicio debe estar abajo con icono casita. TODOS los botones con iconos en panel de control
+
+-opcion para cambiar el precio a TODOS los productos, ejemplo si tenes que aumentar todos un 1% poddes hacerlo sumandole ese porcentaje
+
+
+- DEBERIA MOSTRAR FECHA DE VENCIMIENTO??
+
+
+MARCA tiene que ser una lista desplegable con las marcas que el vendedor se vaya creando, una vez que agrego una nueva marca le va a aparecer siempre en la lista
+O podria yo cargarle TODAS las marcas al igual que las categorias y subcategorias, para que tenga que hacer menos laburo
+
+
+en modal de crear producto, poner icono para cerrar, y valido si hay algun input con algo en el VALUE, osea algo escrito, pregunto si quiere posta confirmar la cerrada, con otra modal
+
+
+
+-puede configurar para que acepte pagos en efectivo al retirar el pedido (aunque se arriesga a que le hagan pedidos y que no los retiren(podria mostrarle la historia de ese comprador)) o 
+ si tiene su cuenta de mercadopago puesta, el comprador puede pagarle por ahi tambien. de todas maneras, yo a cada carrito cerrado me guardo los datos de lo que me va a pagar, y a fin de mes
+ el vendedor me tiene que pagar el total de cada venta.
+
+
+Subcats, subsubcats y marcas puede agregar
+
+
+-convertir siempre en primera letra mayuscula para los inputs del producto,
+-"No mostrar mas esta ventana" cuando se elimina un producto
+
+.-----------------
+
+CRONOGRAMA : 
+
+
+Creo un State objeto, con los datos actualizados
+
+Cambio inputs 
+
+Le agregó los onChange con lo del handleChange 
+
+Lo agregó al array
+
+Llamo al componente PRODUCTO pasándolo props, el objeto vacío o lleno, y un string q sea "ALTA" o "MODIFICACIÓN "
+
+Adapto el componente para que según la operación edite o cree
+
+
+
+
+un usuario no puede dejar un comentario ni nada, si no compro el producto
+
+
+
+
+
+
+import React, { useState, useEffect } from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
+import axios from 'axios'
+
+import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap'
+
+
+const Proveedores = () => {
+
+    const [modalInsertar, setModalInsertar] = useState(false)
+    const [ventanaDelete,setVentanaDelete]=useState(false)
+
+    // variable para setear si abro el modal para hacer una
+    //modificacion o un alta
+    const [operacion, setOperacion] = useState("")
+
+    const abrirCerrarDelete = () => {
+        setVentanaDelete(!ventanaDelete)
+    }
+
+    const abrirCerrarModal = () => {
+
+        setModalInsertar(!modalInsertar)
+
+    }
+
+    const Nuevo = () => {
+        setOperacion("alta")
+
+        abrirCerrarModal()
+    }
+
+    const Modifica = (proveedor) => {
+
+        console.log("entre a modificar el id:" + proveedor.id )
+        setOperacion("Modifica")
+
+        SeleccionarRegistro(proveedor.id)
+        abrirCerrarModal()
+    }
+
+    const baseUrl = "https://localhost:44307/api/Proveedores"
+    //array para recuperar los datos de la api
+    const [data, setData] = useState([])
+
+    const [proveedor, setProveedor] = useState({
+        id: '',
+        RazonSocial: '',
+        Direccion: '',
+        Provincia: '',
+        Observaciones: '',
+        Rubro: 0,
+        Email: '',
+        FechaAlta: Date
+    })
+
+
+    // con esto pedimos los datos para llenar la tabla 
+
+    useEffect(() => {
+        peticionGet()
+
+    }, [])
+
+
+    // guardo en el objeto data definido arriba el json con los datos que me devuelve la api
+    const peticionGet = async () => {
+        await axios.get(baseUrl)
+            .then(response => {
+                setData(response.data)
+            }).catch(error => {
+                console.log(error)
+            })
+
+
+    }
+    // capturar los datos en el evento change de los input
+    // si ponemos a los input el mismo nombre de los campos con un solo evento 
+    // asignamos a todos los valores 
+    const handleChange = e => {
+        const { name, value } = e.target
+        setProveedor({ ...proveedor, [name]: value })
+    }
+
+    const GrabarProveedor = async () => {
+
+        delete proveedor.id
+        proveedor.Rubro = parseInt(proveedor.Rubro)
+        proveedor.FechaAlta = new Date(proveedor.fechaalta)
+
+        console.log(proveedor)
+
+        if (operacion == "alta") {
+
+            await axios.post(baseUrl, proveedor)
+                .then(response => {
+                    setData(data.concat(response.data))
+                    abrirCerrarModal()
+                }).catch(error => {
+                    console.log(error)
+                    alert(error)
+                })
+
+        }
+        else {
+             
+            
+            await axios.put(baseUrl, proveedor)
+                .then(response => {
+                    setData(data.concat(response.data))
+                    abrirCerrarModal()
+                }).catch(error => {
+                    console.log(error)
+                    alert(error)
+                })
+        }
+
+
+    }
+
+    const SeleccionarRegistro =   (id) => {
+        console.log("este es el id seleccionado " + proveedor.id)
+          axios.get(baseUrl + "/" + id  )
+            .then(response => {
+                setProveedor(response.data)
+            }).catch(error => {
+                console.log(error)
+            })
+
+    }
+
+    const borraProve = (prove) => {
+        abrirCerrarDelete()
+    }
+    const eliminarProveedor = async (id) => {
+          
+        await axios.delete(baseUrl, proveedor.id)
+        .then(response => {
+            setData(data.filter(gestor=>gestor.id!==response.data))
+            abrirCerrarDelete()
+        }).catch(error => {
+            console.log(error)
+            alert(error)
+        })
+    }
+ 
+    return (
+
+        <div>
+            <h2>Proveedores SQL </h2>
+            <button className="btn btn-primary" onClick={() => Nuevo()}>Nuevo Registro</button>
+            <table className="table table-dark">
+                <thead>
+                    <th>ID</th>
+                    <th>Razon Social</th>
+                    <th>Direccion</th>
+                    <th>Provincia</th>
+                    <th>Observaciones</th>
+                    <th>Email</th>
+                    <th>Fecha de Alta</th>
+                </thead>
+                <tbody>
+                    {data.map(prove => (
+                        <tr Key={prove.id}>
+                            <td>{prove.id}</td>
+                            <td>{prove.razonSocial}</td>
+                            <td>{prove.direccion}</td>
+                            <td>{prove.provincia}</td>
+                            <td>{prove.observaciones}</td>
+                            <td>{prove.email}</td>
+                            <td>{prove.fechaAlta}</td>
+                            <td>
+                                <button className="btn btn-info" onClick={() => Modifica(prove)}>Modificar</button>
+                                <button className="btn btn-danger" onClick={() => borraProve(prove)}>Eliminar</button>
+                            </td>
+
+
+                        </tr>
+                    ))}
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+
+            <Modal isOpen={modalInsertar}>
+                <ModalHeader>Datos Proveedor {operacion} </ModalHeader>
+                <ModalBody>
+
+
+
+                    <label>Razon Social</label>
+                    <br />
+                    <input type="text" className="form-control" name="razonSocial" onChange={handleChange} value={proveedor && proveedor.razonSocial}></input>
+
+                    <label>Direccion</label>
+                    <br />
+                    <input type="text" className="form-control" name="direccion" onChange={handleChange} value={proveedor && proveedor.direccion}></input>
+
+                    <label>Provincia</label>
+                    <br />
+                    <input type="text" className="form-control" name="provincia" onChange={handleChange} value={proveedor && proveedor.provincia}></input>
+
+                    <label>Observaciones</label>
+                    <br />
+                    <input type="text" className="form-control" name="observaciones" onChange={handleChange} value={proveedor && proveedor.observaciones}></input>
+
+                    <label>Email</label>
+                    <br />
+                    <input type="email" className="form-control" name="email" onChange={handleChange} value={proveedor && proveedor.email}></input>
+
+                    <label>Fecha de Alta</label>
+                    <br />
+                    <input type="date" className="form-control" name="fechaalta" onChange={handleChange} value={proveedor &&  proveedor.fechaAlta }></input>
+
+
+
+                </ModalBody>
+                <ModalFooter>
+                    <button className="btn btn-primary" onClick={() => GrabarProveedor()}>Guardar</button> {"    "}
+                    <button className="btn btn-danger" onClick={abrirCerrarModal}>Cancelar</button>
+                </ModalFooter>
+            </Modal>
+
+            <Modal isOpen={ventanaDelete}>
+                 <ModalBody>
+                     Esta seguro de Eliminar el Proveedor ?  
+                     <h2>{proveedor.razonSocial}</h2>
+                 </ModalBody>
+                 <ModalFooter>
+                     <button className="btn btn-danger" onClick={()=>eliminarProveedor(proveedor)}>Si</button>
+                     <button className="btn btn-secundary" onClick={abrirCerrarDelete}>No</button>
+                 </ModalFooter>
+
+            </Modal>
+
+        </div>
+
+
+
+    )
+}
+
+export default Proveedores
+
+
+
+
